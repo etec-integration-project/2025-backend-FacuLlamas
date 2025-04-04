@@ -1,0 +1,192 @@
+### Obtener todos los productos
+GET http://localhost:3000/api/products
+
+### Crear un nuevo producto
+POST http://localhost:3000/api/products
+Content-Type: application/json
+
+{
+  "name": "Producto de prueba",
+  "price": 99.99,
+  "description": "Descripción del producto de prueba",
+  "imageUrl": "http://localhost:3000/productimages/zapatillas1.jpg"
+}
+
+### Obtener un producto por ID
+GET http://localhost:3000/api/products/1
+
+### Actualizar un producto
+PUT http://localhost:3000/api/products/1
+Content-Type: application/json
+
+{
+  "name": "Producto actualizado",
+  "price": 109.99,
+  "description": "Descripción actualizada"
+}
+
+### Eliminar un producto
+DELETE http://localhost:3000/api/products/1
+
+### Carrito
+### Crear un CartItem
+POST http://localhost:3000/api/cart-items
+Content-Type: application/json
+
+{
+  "cartId": 1,
+  "productId": 2,
+  "quantity": 3
+}
+
+### Obtener todos los CartItems
+GET http://localhost:3000/api/cart-items
+
+### Obtener un CartItem por ID
+GET http://localhost:3000/api/cart-items/1
+
+### Actualizar un CartItem
+PUT http://localhost:3000/api/cart-items/1
+Content-Type: application/json
+
+{
+  "quantity": 5
+}
+
+### Eliminar un CartItem
+DELETE http://localhost:3000/api/cart-items/1
+
+
+### cart
+
+### Obtener todos los carritos
+GET http://localhost:3000/api/carts
+
+### Crear un nuevo carrito
+POST http://localhost:3000/api/carts
+Content-Type: application/json
+
+{
+  "userId": 1
+}
+
+### Obtener un carrito por ID
+GET http://localhost:3000/api/carts/:cartId
+# Reemplaza :cartId con el ID del carrito que deseas obtener
+
+### Actualizar un carrito
+PUT http://localhost:3000/api/carts/:cartId
+Content-Type: application/json
+
+{
+  "userId": 2
+}
+
+### Eliminar un carrito
+DELETE http://localhost:3000/api/carts/:cartId
+# Reemplaza :cartId con el ID del carrito que deseas eliminar
+
+
+### orders
+
+POST http://localhost:3000/api/orders
+Content-Type: application/json
+
+{
+  "userId": 1,
+  "totalPrice": 100.50,
+  "status": "pending"
+}
+
+###
+
+GET http://localhost:3000/api/orders
+
+###
+
+GET http://localhost:3000/api/orders/:orderId
+# Reemplaza :orderId con el ID del pedido que deseas obtener
+
+###
+
+PUT http://localhost:3000/api/orders/:orderId
+Content-Type: application/json
+
+{
+  "status": "completed"
+}
+
+# Reemplaza :orderId con el ID del pedido que deseas actualizar
+
+###
+
+DELETE http://localhost:3000/api/orders/:orderId
+# Reemplaza :orderId con el ID del pedido que deseas eliminar
+
+### OrderItem
+
+### Obtener todos los OrderItems
+GET http://localhost:3000/api/order-items
+
+### Crear un OrderItem
+POST http://localhost:3000/api/order-items
+Content-Type: application/json
+
+{
+  "orderId": 1,
+  "productId": 2,
+  "quantity": 3,
+  "price": 29.99
+}
+
+### Obtener un OrderItem por ID
+GET http://localhost:3000/api/order-items/:orderItemId
+# Reemplaza :orderItemId con el ID del OrderItem que deseas obtener
+
+### Actualizar un OrderItem
+PUT http://localhost:3000/api/order-items/:orderItemId
+Content-Type: application/json
+
+{
+  "quantity": 5,
+  "price": 24.99
+}
+
+### Eliminar un OrderItem
+DELETE http://localhost:3000/api/order-items/:orderItemId
+# Reemplaza :orderItemId con el ID del OrderItem que deseas eliminar
+
+### User
+
+### Obtener todos los usuarios
+GET http://localhost:3000/api/users
+
+### Crear un usuario
+POST http://localhost:3000/api/users
+Content-Type: application/json
+
+{
+  "name": "Juan Pérez",
+  "email": "juan.perez@example.com",
+  "password": "123456"
+}
+
+### Obtener un usuario por ID
+GET http://localhost:3000/api/users/:userId
+# Reemplaza :userId con el ID del usuario que deseas obtener
+
+### Actualizar un usuario
+PUT http://localhost:3000/api/users/:userId
+Content-Type: application/json
+
+{
+  "name": "Juan Pérez Actualizado",
+  "email": "juan.perez.nuevo@example.com"
+}
+
+### Eliminar un usuario
+DELETE http://localhost:3000/api/users/:userId
+# Reemplaza :userId con el ID del usuario que deseas eliminar
+
+
+
