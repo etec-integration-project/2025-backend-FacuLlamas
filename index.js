@@ -36,7 +36,10 @@ app.use("/api/carts", cartRoutes);
 app.use("/api/orders", orderRoutes);
 app.use("/api/order-items", orderItemRoutes);
 app.use("/api/cart-items", cartItemRoutes);
-app.use("/productimages", express.static(path.join(__dirname, "productimages")));
+app.use(
+  "/productimages",
+  express.static(path.join(__dirname, "productimages"))
+);
 
 // Sincroniza Sequelize y luego inicia el servidor
 sequelize
