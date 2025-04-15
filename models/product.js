@@ -11,7 +11,7 @@ module.exports = (sequelize, DataTypes) => {
       Product.hasMany(models.OrderItem, { foreignKey: "productId" });
     }
   }
-  
+
   Product.init(
     {
       name: DataTypes.STRING,
@@ -22,13 +22,13 @@ module.exports = (sequelize, DataTypes) => {
       color: DataTypes.STRING,
       description: DataTypes.STRING,
       stock: DataTypes.INTEGER,
-      imageUrl: DataTypes.STRING, // Nueva columna para la URL de la imagen del producto
+      imageBase64: DataTypes.TEXT("long"), // Nueva columna para la URL de la imagen del producto
     },
     {
       sequelize,
       modelName: "Product",
     }
   );
-  
+
   return Product;
 };

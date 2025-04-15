@@ -19,7 +19,8 @@ app.use(
 
 app.options("*", cors());
 
-app.use(express.json());
+app.use(express.json({ limit: "10mb" })); // Para JSON grande
+app.use(express.urlencoded({ limit: "10mb", extended: true })); // Para formularios grandes
 
 // Importa las rutas
 const productRoutes = require("./routes/productRoutes");
