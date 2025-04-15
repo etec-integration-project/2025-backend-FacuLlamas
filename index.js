@@ -44,7 +44,7 @@ app.use(
 
 // Sincroniza Sequelize y luego inicia el servidor
 sequelize
-  .sync({ force: false }) // Cambia a `true` solo si quieres recrear las tablas en cada inicio
+  .sync({ force: true }) // Cambia a `true` solo si quieres recrear las tablas en cada inicio
   .then(() => {
     console.log("Base de datos sincronizada correctamente.");
     app.listen(PORT, () => {
